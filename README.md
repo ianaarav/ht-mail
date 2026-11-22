@@ -1,14 +1,15 @@
 # HyperTract Mail (HT Mail)
 
 
-HT Mail is a personal project exploring whether a self-hosted mail server can bring email to the native BlackBerry Hub experience without a paid email provider or cloud-hosted mailbox.
+HT Mail is a personal project exploring self-hosted email that can be accessed from compatible devices and mail clients using standard IMAP and SMTP. BlackBerry 10 Hub is an important target, but the project is not limited to BlackBerry: other devices can connect when their mail client supports the required protocols and trusts the HT Mail server certificate (for example, by installing the project's CA certificate).
 
 > **Status:** Early development. Local-network email works with a BlackBerry 10 device. Internet-facing access and external email delivery are not yet complete.
 
 ## Project goals
 
 - Run the infrastructure on hardware I already own.
-- Use the native BlackBerry 10 Hub as the primary mail client.
+- Support compatible mail clients across devices using standard IMAP and SMTP.
+- Keep BlackBerry 10 Hub support as an important compatibility goal.
 - Manage account authentication with LDAP.
 - Encrypt mail access and submission connections.
 - Keep the project strictly ₹0, without paid hosting or subscriptions.
@@ -24,7 +25,8 @@ HT Mail is a personal project exploring whether a self-hosted mail server can br
 | OpenLDAP | User directory and authentication |
 | OpenSSL private CA | Internal server certificate chain |
 | Radicale | Self-hosted CalDAV/CardDAV service under exploration |
-| BlackBerry 10 Hub | Primary mail client |
+| Compatible IMAP/SMTP clients | Mail access across supported devices |
+| BlackBerry 10 Hub | Important target client |
 
 ## What works
 
@@ -34,6 +36,7 @@ HT Mail is a personal project exploring whether a self-hosted mail server can br
 - [x] Authenticated SMTP submission over STARTTLS.
 - [x] Local delivery to Maildir.
 - [x] BlackBerry 10 Hub connected over the home Wi-Fi network.
+- [x] Server-side IMAP/SMTP setup uses standard protocols, allowing other compatible clients to be configured.
 - [x] Internal server certificate chain validated in connection tests.
 
 ## Work in progress
@@ -64,11 +67,11 @@ Only publish reviewed, sanitized examples. See [SECURITY.md](SECURITY.md) for re
 
 ## Hardware
 
-The current server runs on repurposed laptop hardware. The client target is a BlackBerry Z10 running BlackBerry 10 OS 10.3.3 (build 3216).
+The current server runs on repurposed laptop hardware. One tested client is a BlackBerry Z10 running BlackBerry 10 OS 10.3.3 (build 3216). Other devices are intended to work when their mail apps support IMAP over TLS and authenticated SMTP submission over STARTTLS, and trust the server certificate. Installing the HT Mail CA certificate may be necessary; certificate installation alone does not guarantee compatibility with every device or mail app.
 
 ## Why?
 
-BlackBerry 10 has a distinctive native communication experience. This project explores preserving that experience with infrastructure I can run and understand myself.
+BlackBerry 10 has a distinctive native communication experience, but HT Mail is not exclusive to it. The project aims to provide standards-based email access to a range of compatible devices while keeping the infrastructure self-hosted and understandable.
 
 ## Contributing
 
