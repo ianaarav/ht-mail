@@ -1,6 +1,5 @@
 # HyperTract Mail (HT Mail)
 
-**A ₹0 self-hosted email infrastructure experiment focused on BlackBerry 10.**
 
 HT Mail is a personal project exploring whether a self-hosted mail server can bring email to the native BlackBerry Hub experience without a paid email provider or cloud-hosted mailbox.
 
