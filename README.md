@@ -1,16 +1,15 @@
 # HyperTract Mail (HT Mail)
 
+HT Mail is a personal, for-fun project where I experiment with running my own email and directory services. I built it to learn how self-hosted infrastructure works, and to explore the different pieces involved in operating my own mail and LDAP services.
 
-HT Mail is a personal, for-fun project where I experiment with running my own email and directory services. I built it to learn and explore self-hosting—not to target a particular device or platform. I also set it up for use on my BlackBerry 10 device and my Samsung phone, just because I wanted to.
-
-> **Status:** Early development. Local-network email works with a BlackBerry 10 device. Internet-facing access and external email delivery are not yet complete.
+> **Status:** Early development. Local email delivery and mail access are working. External access and general internet email delivery are not yet complete.
 
 ## What I'm exploring
 
 - Running my own email and LDAP services on hardware I already own.
 - Learning how Postfix, Dovecot, OpenLDAP and TLS certificates work together.
-- Using standard email protocols with devices and mail clients I have available.
 - Experimenting with my own certificate authority and trusted certificates.
+- Understanding authentication, mail delivery, storage and server administration.
 - Keeping the project free of cost by using existing hardware and avoiding paid hosting or subscriptions.
 - Documenting the experiment and sharing what I learn.
 
@@ -24,7 +23,6 @@ HT Mail is a personal, for-fun project where I experiment with running my own em
 | OpenLDAP | User directory and authentication |
 | OpenSSL private CA | Internal server certificate chain |
 | Radicale | Self-hosted CalDAV/CardDAV service under exploration |
-| Compatible IMAP/SMTP clients | Mail access from configured devices |
 
 ## What works
 
@@ -33,15 +31,13 @@ HT Mail is a personal, for-fun project where I experiment with running my own em
 - [x] IMAP over TLS.
 - [x] Authenticated SMTP submission over STARTTLS.
 - [x] Local delivery to Maildir.
-- [x] Email configured and working on a BlackBerry 10 device and a Samsung phone.
-- [x] LDAP service configured for use from my BlackBerry 10 device and Samsung phone.
 - [x] Internal server certificate chain validated in connection tests.
 
 ## Work in progress
 
 - [ ] Reliable access from outside the home network using a genuinely free solution.
 - [ ] Investigate ISP IPv6 and carrier-grade NAT limitations.
-- [ ] Explore further integrations and client compatibility.
+- [ ] Explore further service integrations.
 - [ ] Improve installation and maintenance documentation.
 - [ ] Add reviewed, sanitized example configurations and troubleshooting guides.
 
@@ -65,15 +61,15 @@ Only publish reviewed, sanitized examples. See [SECURITY.md](SECURITY.md) for re
 
 ## Hardware
 
-The server runs on repurposed laptop hardware. I currently use the services from a BlackBerry Z10 running BlackBerry 10 OS 10.3.3 (build 3216) and a Samsung phone. These are simply the devices I chose to connect; the project itself is not designed exclusively for them.
+The server runs on repurposed laptop hardware.
 
 ## Why?
 
-Mostly curiosity and the fun of building something myself. I wanted to understand how email servers, LDAP, certificates and self-hosted infrastructure fit together—and then try using the services on devices I already own.
+Mostly curiosity and the fun of building something myself. I wanted to understand how email servers, LDAP, certificates and self-hosted infrastructure fit together.
 
 ## Contributing
 
-Documentation feedback, testing ideas and discussions from self-hosting and BlackBerry enthusiasts are welcome. Please open an issue before proposing major changes.
+Documentation feedback, testing ideas and discussions from the self-hosting community are welcome. Please open an issue before proposing major changes.
 
 ## License
 
