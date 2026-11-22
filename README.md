@@ -12,7 +12,7 @@ HT Mail is a personal project exploring self-hosted email that can be accessed f
 - Keep BlackBerry 10 Hub support as an important compatibility goal.
 - Manage account authentication with LDAP.
 - Encrypt mail access and submission connections.
-- Keep the project strictly ₹0, without paid hosting or subscriptions.
+- Aim to keep the project free of cost by using existing hardware and avoiding paid hosting or subscriptions.
 - Share documentation for other BlackBerry and self-hosting enthusiasts.
 
 ## Current architecture
